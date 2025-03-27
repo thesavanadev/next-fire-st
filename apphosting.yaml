@@ -6,8 +6,9 @@ runConfig:
   # concurrency: 80
   # cpu: 1
   # memoryMiB: 512
+
 # Environment variables and secrets.
-# env:
+env:
 # Configure environment variables.
 # See https://firebase.google.com/docs/app-hosting/configure#user-defined-environment
 # - variable: MESSAGE
@@ -15,6 +16,11 @@ runConfig:
 #   availability:
 #     - BUILD
 #     - RUNTIME
+  - variable:NEXT_PUBLIC_SERVER_URL
+    value: https://next-fire-st.s3.co.ke
+    availability:
+      - BUILD
+      - RUNTIME
 
 # Grant access to secrets in Cloud Secret Manager.
 # See https://firebase.google.com/docs/app-hosting/configure#secret-parameters
