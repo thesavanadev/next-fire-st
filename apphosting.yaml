@@ -8,7 +8,7 @@ runConfig:
 
 # environment variables and secrets
 env:
-  - variable:NEXT_PUBLIC_SERVER_URL
+  - variable: NEXT_PUBLIC_SERVER_URL
     value: https://next-fire-st.s3.co.ke
     availability:
       - BUILD
