@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import { Comfortaa as FontHeader, Montserrat as FontBody } from "next/font/google";
 
 import { cn } from "@/utils";
+import { env } from "@/lib/env";
 
 import { ThemeProvider } from "@/components/providers/theme-provider";
 
@@ -12,15 +13,13 @@ import type { Metadata } from "next";
 
 import "@/styles/globals.css";
 
-const publicURL = "https://next-fire-st.s3.co.ke";
-
 export const metadata: Metadata = {
 	title: {
 		template: "%s | NextJS Starter Template",
 		default: "NextJS Starter Template",
 	},
 	description: "Template to get started with Next.js, Tailwind CSS and shadcn/ui.",
-	metadataBase: new URL(publicURL),
+	metadataBase: new URL(env.NEXT_PUBLIC_SERVER_URL),
 	openGraph: {
 		images: "/favicon.svg",
 	},
